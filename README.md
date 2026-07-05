@@ -10,6 +10,9 @@
 > **Note**
 >
 > This repository is a public engineering case study. The production source code, deployment configuration and operational database remain in a private client repository.
+>  > 
+> **Confidentiality & Media Safeguards:** All visual diagrams, interface illustrations, and pipeline maps featured in this case study are **conceptual design mockups and system planning blueprints** created during requirements mapping. No active production databases, sensitive client credentials, or private volunteer data are exposed.
+
 
 
 ---
