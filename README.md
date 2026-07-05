@@ -26,12 +26,13 @@ The solution combines **Google Apps Script**, **Google Workspace** and a **Next.
 
 # Technology Stack
 
-| Frontend | Backend | Infrastructure |
-|----------|----------|----------------|
-| Next.js 16 | Google Apps Script | Google Sheets |
-| React | TypeScript | Google Drive |
-| Tailwind CSS | NextAuth.js | Microsoft Entra ID |
-| Recharts | Google Sheets API | Vercel |
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![NextAuth](https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=nextauth&logoColor=white)
+![Azure AD](https://img.shields.io/badge/Microsoft_Azure_AD-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Google Sheets API](https://img.shields.io/badge/Google_Sheets_API-4285F4?style=for-the-badge&logo=googlesheets&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Google Apps Script](https://img.shields.io/badge/Google_Apps_Script-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
 ---
 
@@ -74,7 +75,9 @@ flowchart TD
 ```
 
 ---
+![Workflow](docs/images/WotW_workflow.png)
 
+---
 ## Enterprise Security Model
 
 To protect sensitive submission files, contact details and grading data, the application uses a dual-layer security model.
@@ -111,6 +114,8 @@ Because English-only readers cannot review Scots or Gaelic entries, the allocati
 
 The allocation engine also enforces the **three-reader fairness rule**, ensuring each story is assigned to three independent reviewers where capacity allows.
 
+![Dashboard Demo Mock Data](docs/images/WotW_demo.png)
+
 ---
 
 ## Automated Reader Pack Assembly
@@ -130,6 +135,7 @@ Each feedback link is prepopulated with the correct identifiers, removing manual
 
 Completed Reader Packs are stored in Google Drive before being distributed through automated HTML email notifications.
 
+![Reader Pack](docs/images/reading_list.jpeg)
 ---
 
 ## Operations & Consensus Centre
@@ -236,6 +242,9 @@ The production application, deployment configuration and client data remain priv
 
 <div align="center">
   
-## Nicola Berry | Empower Automation 
+### Contact & Development
+**Nicola Berry**  
+[Empower Automation](https://empowerautomation.co.uk)  
+nicola@empowerautomation.co.uk  
 
 </div>
