@@ -1,3 +1,5 @@
+![Banner](docs/images/swt-wotw-banner.png)
+
 <div align="center">
 
 
