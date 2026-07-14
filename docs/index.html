@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Words of the Wild | Secure Competition Operations Platform</title>
+
+  <meta
+    name="description"
+    content="A secure multilingual competition operations platform built for the Scottish Wildlife Trust using Google Apps Script, Google Workspace, Next.js and Microsoft Entra ID."
+  >
+
+  <meta
+    name="keywords"
+    content="Scottish Wildlife Trust, Words of the Wild, writing competition platform, Google Apps Script automation, Next.js dashboard, volunteer reader allocation, multilingual judging workflow"
+  >
+
+  <meta name="author" content="Nicola Berry">
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://nicola-empower.github.io/words-of-the-wild/"
+  >
+
+  <meta property="og:type" content="website">
+  <meta
+    property="og:title"
+    content="Words of the Wild | Secure Competition Operations Platform"
+  >
+  <meta
+    property="og:description"
+    content="A secure, multilingual competition management platform built for the Scottish Wildlife Trust."
+  >
+  <meta
+    property="og:url"
+    content="https://nicola-empower.github.io/words-of-the-wild/"
+  >
+  <meta
+    property="og:image"
+    content="https://nicola-empower.github.io/words-of-the-wild/images/swt-wotw-banner.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    name="twitter:title"
+    content="Words of the Wild | Secure Competition Operations Platform"
+  >
+  <meta
+    name="twitter:description"
+    content="A secure, multilingual competition management platform built for the Scottish Wildlife Trust."
+  >
+  <meta
+    name="twitter:image"
+    content="https://nicola-empower.github.io/words-of-the-wild/images/swt-wotw-banner.png"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Words of the Wild Operations Control Panel",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "A secure multilingual competition management platform built for the Scottish Wildlife Trust.",
+    "creator": {
+      "@type": "Person",
+      "name": "Nicola Berry",
+      "url": "https://nicolaberry.uk"
+    },
+    "codeRepository": "https://github.com/nicola-empower/words-of-the-wild",
+    "url": "https://nicola-empower.github.io/words-of-the-wild/"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Words of the Wild home">
+        <span class="brand-mark">W</span>
+        <span>Words of the Wild</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#system">System</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#security">Security</a>
+        <a href="#impact">Impact</a>
+        <a
+          class="nav-cta"
+          href="https://github.com/nicola-empower/words-of-the-wild"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View repository
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Public engineering case study</p>
+
+          <h1>
+            A secure operations platform for a national
+            <span>nature writing competition.</span>
+          </h1>
+
+          <p class="hero-intro">
+            Built for the Scottish Wildlife Trust to manage multilingual
+            submissions, volunteer reader allocation, scoring, arbitration
+            and final competition rankings.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#dashboard">
+              Explore the platform
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="https://github.com/nicola-empower/words-of-the-wild"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View technical README
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <img
+            src="images/swt-wotw-banner.png"
+            alt="Words of the Wild Scottish Wildlife Trust project banner"
+          >
+        </div>
+
+        <div class="trust-note reveal">
+          <strong>Privacy note:</strong>
+          All interface images shown on this site use representative
+          demonstration data. No live submission content, volunteer details,
+          credentials or private operational records are displayed.
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The operational challenge</p>
+          <h2>Replacing a complex manual process with one connected system.</h2>
+          <p>
+            The competition required hundreds of anonymous submissions to be
+            distributed across a large volunteer reading team, with every
+            story reviewed independently and routed correctly across English,
+            Scots and Gaelic.
+          </p>
+        </div>
+
+        <div class="stat-grid">
+          <article class="stat-card reveal">
+            <strong>650+</strong>
+            <span>Competition submissions</span>
+          </article>
+
+          <article class="stat-card reveal">
+            <strong>3</strong>
+            <span>Supported languages</span>
+          </article>
+
+          <article class="stat-card reveal">
+            <strong>3</strong>
+            <span>Independent reviews per story</span>
+          </article>
+
+          <article class="stat-card reveal">
+            <strong>20</strong>
+            <span>Anonymous stories per reader pack</span>
+          </article>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-number">01</span>
+            <h3>Anonymous processing</h3>
+            <p>
+              Submission data is transformed into anonymous PDFs and reader
+              materials without exposing entrant details.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">02</span>
+            <h3>Language-aware allocation</h3>
+            <p>
+              The allocation engine prioritises Scots and Gaelic capability
+              before distributing English-language entries.
+            </p>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">03</span>
+            <h3>Automated reconciliation</h3>
+            <p>
+              Prefilled review links connect every response to the correct
+              reader, story and assignment automatically.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="green-divider" aria-hidden="true"></div>
+
+    <section id="system" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">System architecture</p>
+          <h2>Google Workspace automation with a secure Next.js control layer.</h2>
+          <p>
+            Google Apps Script manages the background workflow, while the
+            server-side dashboard gives authorised administrators a clear,
+            responsive operational interface.
+          </p>
+        </div>
+
+        <div class="architecture-layout">
+          <div class="architecture-image reveal">
+            <img
+              src="images/WotW_workflow.png"
+              alt="Words of the Wild system workflow showing submissions, automation, reader allocation and dashboard monitoring"
+            >
+          </div>
+
+          <div class="architecture-list">
+            <article class="architecture-item reveal">
+              <span>01</span>
+              <div>
+                <h3>Submission intake</h3>
+                <p>
+                  Gravity Forms sends new entries into the operational Google
+                  Sheets database through a webhook-driven workflow.
+                </p>
+              </div>
+            </article>
+
+            <article class="architecture-item reveal">
+              <span>02</span>
+              <div>
+                <h3>Automation engine</h3>
+                <p>
+                  Apps Script creates anonymous PDFs, allocates readers,
+                  assembles packs and sends personalised reviewer emails.
+                </p>
+              </div>
+            </article>
+
+            <article class="architecture-item reveal">
+              <span>03</span>
+              <div>
+                <h3>Review reconciliation</h3>
+                <p>
+                  Prefilled Google Forms preserve assignment identifiers and
+                  reconcile each response with the correct story.
+                </p>
+              </div>
+            </article>
+
+            <article class="architecture-item reveal">
+              <span>04</span>
+              <div>
+                <h3>Operations dashboard</h3>
+                <p>
+                  A secure Next.js application provides live progress,
+                  adjudication, allocation and competition insights.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="stack-row reveal" aria-label="Technology stack">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Google Apps Script</span>
+          <span>Google Sheets API</span>
+          <span>Microsoft Entra ID</span>
+          <span>Tailwind CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="green-divider" aria-hidden="true"></div>
+
+    <section id="dashboard" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Visual product tour</p>
+          <h2>Live operational oversight without opening the underlying database.</h2>
+          <p>
+            Each interface was designed to help staff understand the current
+            state of the competition quickly, identify risk early and act
+            without manually auditing hundreds of spreadsheet rows.
+          </p>
+        </div>
+
+        <article class="showcase reveal">
+          <div class="showcase-copy">
+            <p class="showcase-label">01 · Operations control panel</p>
+            <h3>One place to understand the entire competition.</h3>
+            <p>
+              The main dashboard combines submission totals, completed
+              reviews, language representation, consensus outcomes and the
+              arbitration queue.
+            </p>
+
+            <ul>
+              <li>Live progress indicators</li>
+              <li>Consensus and review summaries</li>
+              <li>Language distribution monitoring</li>
+              <li>Arbitration cases requiring staff action</li>
+            </ul>
+          </div>
+
+          <div class="showcase-image">
+            <img
+              src="images/operations-control-panel-demo.png"
+              alt="Operations Control Panel using representative demonstration data"
+              loading="lazy"
+            >
+          </div>
+        </article>
+
+        <article class="showcase showcase-reverse reveal">
+          <div class="showcase-copy">
+            <p class="showcase-label">02 · Stories adjudication monitor</p>
+            <h3>Story-level progress across hundreds of submissions.</h3>
+            <p>
+              Every anonymous submission can be searched, filtered and
+              reviewed without exposing entrant information.
+            </p>
+
+            <ul>
+              <li>Allocated-reader counts</li>
+              <li>Completed review progress</li>
+              <li>Exact Yes, No and Unsure ratios</li>
+              <li>Language and adjudication filters</li>
+              <li>Pagination designed for 650+ entries</li>
+            </ul>
+          </div>
+
+          <div class="showcase-image">
+            <img
+              src="images/stories-monitor-demo.png"
+              alt="Stories Adjudication Monitor using representative demonstration data"
+              loading="lazy"
+            >
+          </div>
+        </article>
+
+        <article class="showcase reveal">
+          <div class="showcase-copy">
+            <p class="showcase-label">03 · Eagle Eye allocation health</p>
+            <h3>A proactive integrity check for the operational database.</h3>
+            <p>
+              Eagle Eye identifies allocation problems before they become
+              competition delays.
+            </p>
+
+            <ul>
+              <li>Unassigned stories</li>
+              <li>Under-allocated stories</li>
+              <li>Readers with no assignments</li>
+              <li>Collapsible anomaly details</li>
+              <li>Early warning of operational gaps</li>
+            </ul>
+          </div>
+
+          <div class="showcase-image">
+            <img
+              src="images/bottleneck-demo.png"
+              alt="Allocation and review bottleneck monitor using representative demonstration data"
+              loading="lazy"
+            >
+          </div>
+        </article>
+
+        <article class="showcase showcase-reverse reveal">
+          <div class="showcase-copy">
+            <p class="showcase-label">04 · Reader review matrix</p>
+            <h3>Performance, alignment and review activity at a glance.</h3>
+            <p>
+              Anonymous reader identifiers allow staff to monitor completion,
+              average scoring and consensus alignment without displaying
+              public volunteer information.
+            </p>
+
+            <ul>
+              <li>Completed review totals</li>
+              <li>Average score analysis</li>
+              <li>Consensus alignment</li>
+              <li>Recent reviewer activity</li>
+              <li>Strict, balanced and lenient calibration</li>
+            </ul>
+          </div>
+
+          <div class="showcase-image">
+            <img
+              src="images/reader-review-matrix-demo.png"
+              alt="Reader Review Matrix using representative demonstration data"
+              loading="lazy"
+            >
+          </div>
+        </article>
+
+        <article class="showcase reveal">
+          <div class="showcase-copy">
+            <p class="showcase-label">05 · Competition leaderboard</p>
+            <h3>Live rankings generated from completed score forms.</h3>
+            <p>
+              Rankings are calculated within the correct competition category
+              and language stream.
+            </p>
+
+            <ul>
+              <li>Anonymous Story IDs</li>
+              <li>Average scores</li>
+              <li>Completed review counts</li>
+              <li>Language-specific filtering</li>
+              <li>Current ranking position</li>
+            </ul>
+          </div>
+
+          <div class="showcase-image">
+            <img
+              src="images/comp-leaderboard-demo.png"
+              alt="Live Competition Leaderboard using representative demonstration data"
+              loading="lazy"
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="green-divider" aria-hidden="true"></div>
+
+    <section id="security" class="section section-dark">
+      <div class="container">
+        <div class="section-heading section-heading-light reveal">
+          <p class="eyebrow">Enterprise security model</p>
+          <h2>Protected at identity, domain and data-access level.</h2>
+          <p>
+            The public-facing case study contains no production source code or
+            private operational data. The live system applies layered access
+            controls before any dashboard content is rendered.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          <article class="security-card reveal">
+            <span>01</span>
+            <h3>Microsoft Entra ID</h3>
+            <p>
+              Authentication is restricted to the Scottish Wildlife Trust's
+              dedicated Microsoft tenant.
+            </p>
+          </article>
+
+          <article class="security-card reveal">
+            <span>02</span>
+            <h3>Corporate domain validation</h3>
+            <p>
+              A second server-side check ensures only authorised organisational
+              email addresses are accepted.
+            </p>
+          </article>
+
+          <article class="security-card reveal">
+            <span>03</span>
+            <h3>Server-side data access</h3>
+            <p>
+              Operational data is retrieved securely without exposing database
+              credentials to the browser.
+            </p>
+          </article>
+
+          <article class="security-card reveal">
+            <span>04</span>
+            <h3>Data minimisation</h3>
+            <p>
+              Story and reader workflows use anonymous identifiers wherever
+              personal details are not operationally required.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Impact and outcomes</p>
+          <h2>From spreadsheet coordination to proactive competition operations.</h2>
+        </div>
+
+        <div class="impact-grid">
+          <article class="impact-card reveal">
+            <h3>Manual work reduced</h3>
+            <p>
+              Reader allocation, document generation, pack assembly and
+              notification emails are handled automatically.
+            </p>
+          </article>
+
+          <article class="impact-card reveal">
+            <h3>Volunteer experience improved</h3>
+            <p>
+              Prefilled review links removed the need to search through a
+              dropdown containing more than 1,000 story titles.
+            </p>
+          </article>
+
+          <article class="impact-card reveal">
+            <h3>Earlier intervention</h3>
+            <p>
+              Staff can identify inactive readers, stalled stories and
+              allocation gaps while the reading period is still active.
+            </p>
+          </article>
+
+          <article class="impact-card reveal">
+            <h3>Transparent adjudication</h3>
+            <p>
+              Every story can be followed from assignment through vote ratio,
+              consensus decision and arbitration.
+            </p>
+          </article>
+        </div>
+
+        <div class="decision-panel reveal">
+          <div>
+            <p class="eyebrow">Engineering principle</p>
+            <h2>Client-owned infrastructure, not unnecessary SaaS dependency.</h2>
+          </div>
+
+          <p>
+            The system was designed around tools already present within the
+            client's operational environment. Google Workspace handles the
+            automation and data workflow, while the bespoke dashboard provides
+            the specialist interface the competition required.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-wrap reveal">
+        <div>
+          <p class="eyebrow">Explore the engineering case study</p>
+          <h2>See the architecture, workflow and technical decisions.</h2>
+        </div>
+
+        <div class="cta-actions">
+          <a
+            class="button button-light"
+            href="https://github.com/nicola-empower/words-of-the-wild"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub repository
+          </a>
+
+          <a
+            class="button button-outline-light"
+            href="https://empowerautomation.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Empower Automation
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Words of the Wild</strong>
+        <p>
+          Public engineering case study by Nicola Berry.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://nicolaberry.uk" target="_blank" rel="noopener noreferrer">
+          Portfolio
+        </a>
+        <a href="https://empowerautomation.co.uk" target="_blank" rel="noopener noreferrer">
+          Empower Automation
+        </a>
+        <a href="mailto:nicola@empowerautomation.co.uk">
+          Contact
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
