@@ -477,3 +477,10 @@ The production application, deployment configuration and client data remain priv
 nicola@empowerautomation.co.uk  
 
 </div>
+
+<p align="center">
+  <img
+    src="https://komarev.com/ghpvc/?username=nicola-empower-words-of-the-wild&label=Repository%20Views&color=e91e63&style=for-the-badge"
+    alt="Chore Quest repository views"
+  />
+</p>
