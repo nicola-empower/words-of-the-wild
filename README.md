@@ -40,8 +40,13 @@ The solution combines **Google Apps Script**, **Google Workspace** and a **Next.
 ![Google Sheets API](https://img.shields.io/badge/Google_Sheets_API-4285F4?style=for-the-badge&logo=googlesheets&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Google Apps Script](https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=googleappsscript&logoColor=white)
+![Views](https://github-tracker-blush.vercel.app/api/badge/words-of-the-wild)
+![Clones](https://github-tracker-blush.vercel.app/api/badge/words-of-the-wild?metric=clones)
 
----
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=1F5D42&height=3&section=header" width="100%" alt="">
+</p>
+
 
 # System Architecture
 
