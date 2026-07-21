@@ -582,11 +582,11 @@
     <section id="review" class="section section-soft">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">AI-assisted source-code review</p>
+          <p class="eyebrow">Source-code review</p>
           <h2>Why the hybrid architecture was the right fit.</h2>
           <p>
-            NotebookLM reviewed the documented workflow and Google Apps Script
-            implementation to assess the architectural approach, its strongest
+            On review of the documented workflow and Google Apps Script
+            implementation assessing the architectural approach, its strongest
             design decisions and the realistic alternatives available to the
             Scottish Wildlife Trust.
           </p>
@@ -640,50 +640,120 @@
           <h2>Other architectures were possible, but each introduced a larger trade-off.</h2>
         </div>
 
-        <div class="architecture-list">
-          <article class="architecture-item reveal">
-            <span>01</span>
-            <div>
-              <h3>Fully custom web application</h3>
-              <p>
-                A bespoke Next.js, Node.js and PostgreSQL platform could have
-                placed submissions, allocation, reading and scoring inside one
-                application. It would remove Apps Script runtime constraints
-                and support a richer volunteer interface, but would require
-                substantially more development, hosting, maintenance and
-                account administration.
-              </p>
-            </div>
-          </article>
+        <article class="alternative-card">
+      <div class="alternative-number">01</div>
+      <div class="alternative-content">
+        <h3>Fully custom web application</h3>
+        <p>
+          A bespoke Next.js, Node.js and PostgreSQL platform could have managed
+          submissions, allocations, reading and scoring within a single
+          application.
+        </p>
 
-          <article class="architecture-item reveal">
-            <span>02</span>
-            <div>
-              <h3>Commercial submissions platform</h3>
-              <p>
-                A specialist competition product could provide reviewer
-                accounts, blind judging and scoring tools out of the box.
-                However, the Trust would inherit recurring licence costs and a
-                more rigid workflow that may not reproduce the competition's
-                Scots and Gaelic routing, allocation and arbitration rules.
-              </p>
-            </div>
-          </article>
+        <div class="tradeoff-columns">
+          <div>
+            <h4>Advantages</h4>
+            <p>
+              Database operations would not be affected by Apps Script runtime
+              limits or Google Workspace quotas. The platform could also offer
+              an integrated side-by-side reading and scoring interface.
+            </p>
+          </div>
 
-          <article class="architecture-item reveal">
-            <span>03</span>
-            <div>
-              <h3>No-code database and automation stack</h3>
-              <p>
-                Airtable, Softr and Make or Zapier could create a visual
-                database and volunteer portal with less custom code. At this
-                volume, however, thousands of automation operations, record
-                limits and per-user pricing would increase both cost and
-                third-party dependency.
-              </p>
-            </div>
-          </article>
+          <div>
+            <h4>Trade-offs</h4>
+            <p>
+              Development costs would have been substantially higher. It would also introduce ongoing
+              hosting, database maintenance and account-management requirements
+              for approximately 150 volunteers.
+            </p>
+          </div>
         </div>
+      </div>
+    </article>
+
+    <article class="alternative-card">
+      <div class="alternative-number">02</div>
+      <div class="alternative-content">
+        <h3>Commercial submissions platform</h3>
+        <p>
+          Products such as Submittable, Zealous or Judgify provide ready-made
+          submission and judging portals.
+        </p>
+
+        <div class="tradeoff-columns">
+          <div>
+            <h4>Advantages</h4>
+            <p>
+              These platforms include reviewer accounts, blind judging,
+              scoring matrices and administrative tools without requiring
+              custom development.
+            </p>
+          </div>
+
+          <div>
+            <h4>Trade-offs</h4>
+            <p>
+              The Trust would be committed to substantial recurring licence
+              costs and a more rigid workflow. Specialist requirements such as
+              Scots and Gaelic routing, arbitration and the competition’s
+              specific reader-allocation rules could be difficult to reproduce.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="alternative-card">
+      <div class="alternative-number">03</div>
+      <div class="alternative-content">
+        <h3>No-code database and automation stack</h3>
+        <p>
+          Airtable, Softr and Make or Zapier could have been combined to create
+          a relational database, volunteer portal and automated workflow.
+        </p>
+
+        <div class="tradeoff-columns">
+          <div>
+            <h4>Advantages</h4>
+            <p>
+              A relational structure and visual portal could be assembled
+              relatively quickly with less custom code.
+            </p>
+          </div>
+
+          <div>
+            <h4>Trade-offs</h4>
+            <p>
+              With approximately 900 submissions and multiple reviews per
+              entry, the workflow would generate thousands of automation
+              operations. Usage-based automation charges, database limits and
+              per-user pricing could make the system expensive to operate and
+              increasingly dependent on third-party services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <aside class="review-verdict">
+    <p class="eyebrow">Review Conclusion</p>
+    <blockquote>
+      The chosen architecture represents the strongest practical balance for
+      the Scottish Wildlife Trust: a bespoke and secure operational platform
+      with a simple volunteer experience, minimal recurring costs and enough
+      flexibility to support the competition’s specialist judging workflow.
+    </blockquote>
+
+    <p>
+      Google Apps Script performs the high-volume operational processing within
+      the Trust’s existing Workspace environment, while Next.js provides staff
+      with a polished, secure interface for monitoring progress, resolving
+      exceptions and managing the competition.
+    </p>
+  </aside>
+</section>
 
         <div class="decision-panel reveal">
           <div>
